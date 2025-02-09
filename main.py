@@ -1,5 +1,6 @@
 import requests
 from twilio.rest import Client
+import os
 
 VIRTUAL_TWILIO_NUMBER = "+12195015527"
 VERIFIED_NUMBER = "+18056965629"
@@ -12,8 +13,8 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 STOCK_API_KEY = "M7AN3ZCMNF0SLPDV"
 NEWS_API_KEY = "49e9a4b4f7784c1aacccf52fce6c134e"
-TWILIO_SID = "AC79edfd92a780a55e173379be7dcf680c"
-TWILIO_AUTH_TOKEN = "069f2ef2d4cdf7b57059717ae0b17240"
+TWILIO_SID = os.environ["AC79edfd92a780a55e173379be7dcf680c"]
+TWILIO_AUTH_TOKEN = os.environ["069f2ef2d4cdf7b57059717ae0b17240"]
 
 stock_params = {
     "function": "TIME_SERIES_DAILY",
